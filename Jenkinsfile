@@ -8,4 +8,18 @@ pipeline {
             }
         }
     }
+
+    post {
+        success {
+            echo 'Build finished successfully!'
+        }
+
+        failure {
+            echo 'Build failed!'
+        }
+
+        always {
+            echo 'Pipeline execution completed.'
+        }
+    }
 }
